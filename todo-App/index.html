@@ -53,15 +53,23 @@
           <!-- End -->
           <!--Dropdown List, select a game you want to add comment on it-->
           <div class="dropdown">
-            <button class="btn btn-light dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
-            <span class="caret"></span></button>
-            <ul class="dropdown-menu">
-              <li><a href="#">League of Legends</a></li>
-              <li><a href="#">Counter-Strike: Global Offensive</a></li>
-              <li><a href="#">Rainbow Six</a></li>
-              <li><a href="#">Minecraft</a></li>
-              <li><a href="#">PLAYERUNKNOWN'S BATTLEGROUNDS</a></li>
-            </ul>
+            <form action="#" id="gamedropdown">
+              <select name="games" id="gameOption">
+                <option value="select" disabled selected>Select your option</option>
+                <option value="lol">	League of Legends</option>
+                <option value="csgo">	Counter-Strike: Global Offensive</option>
+                <option value="rainbow6">Tom Clancy's Rainbow Six: Siege</option>
+                <option value="pubg">PLAYERUNKNOWN'S BATTLEGROUNDS</option>
+              </select>
+              <br><br>
+              <textarea id="message" rows="10" cols="30" placeholder="Place enter your comment here"></textarea>
+              <br>
+              <input type="button" onclick="addComment()" value="Submit">   
+            </form>
+            <div style="margin: 100px;">
+                <ul id="comment-list"></ul>
+
+            </div>
           </div>
     </body>
     <footer>
@@ -69,3 +77,5 @@
     </footer>
 
 </html>
+
+<script src="js/main.js"></script>
